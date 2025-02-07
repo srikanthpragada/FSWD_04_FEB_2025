@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <script>
+       function calculateFactorial() {
+            var txtNumber = document.getElementById("txtNumber")
+            var num = txtNumber.value 
+
+            let fact = 1 
+            for(let i = 2; i <= num; i ++)
+                 fact = fact * i 
+
+            alert(fact)
+       }
+    </script>
+</head>
+<body>
+    <h2>Factorial</h2>
+    Number :  <input type="number" id="txtNumber" />
+    <p></p>
+    <button onclick="calculateFactorial()">Calculate</button>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest</title>
+    <script>
+       function calculateInterest() {
+            // calculate interest @ 8% 
+            var txtAmount = document.getElementById("txtAmount")
+            var amount = txtAmount.value 
+            var interest 
+            if (amount < 10000000)
+                interest = amount * 8 / 100
+            else
+                interest = amount * 7 / 100 
+
+            alert(interest)
+       }
+    </script>
+</head>
+<body>
+    <h2>Interest Calculation</h2>
+    Deposit Amount :
+    <input type="number" id="txtAmount" />
+    <p></p>
+    <button onclick="calculateInterest()">Calculate</button>
+    
+</body>
+</html>
