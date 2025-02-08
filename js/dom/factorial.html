@@ -13,7 +13,10 @@
             for(let i = 2; i <= num; i ++)
                  fact = fact * i 
 
-            alert(fact)
+            // get access to H2 with id - factorial
+            let factorial = document.getElementById("lblFactorial")
+            // Place value in H2
+            factorial.innerHTML = fact
        }
     </script>
 </head>
@@ -22,6 +25,7 @@
     Number :  <input type="number" id="txtNumber" />
     <p></p>
     <button onclick="calculateFactorial()">Calculate</button>
+    <h2 id="lblFactorial"></h2>
     
 </body>
 </html>
