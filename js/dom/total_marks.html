@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Marks</title>
+    <script>
+        function getTotal() {
+            // Take data from textbox
+            let data = document.getElementById("txtMarks").value
+            let marks = data.split(",")
+
+            let total = 0
+            for (let m of marks) {
+                 total += parseInt(m)
+                 console.log(m)
+            }
+            let lblTotal = document.getElementById("lblTotal")
+            lblTotal.innerHTML = total 
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Total Marks</h2>
+    Marks : <input type="text" id="txtMarks" />
+    <p></p>
+    <button onClick="getTotal()">Calculate</button>
+    <h1 id="lblTotal"></h1>
+
+</body>
+
+</html>
