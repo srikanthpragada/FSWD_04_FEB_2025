@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function validateData() {
+            let mobile = document.getElementById("txtMobile").value
+            if (! /^\d{10}$/.test(mobile)) {
+                alert("Invalid Mobile Number!")
+                return
+            }
+            // validate password 
+            // Look for a digit
+            let password = document.getElementById("txtPassword").value
+            if (! /\d/.test(password)) {
+                alert("Digit is missing!")
+                return
+            }
+
+            // Look for an uppercase letter
+            if (! /[A-Z]/.test(password)) {
+                alert("Uppercase letter is missing!")
+                return
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Login</h2>
+    Mobile Number <br />
+    <input type="number" id="txtMobile" />
+    <p></p>
+    Password <br />
+    <input type="password" id="txtPassword" />
+    <p></p>
+    <button onclick="validateData()">Login</button>
+</body>
+
+</html>
