@@ -1,6 +1,6 @@
 try {
     let cd = new Date()
-    console.log(cd.getMonth())
+    console.log(cd.month())
 }
 catch (e) {
     console.log("Error :" + e)
