@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timeout Demo</title>
     <script>
-        var id = null; 
+        var id = null; // global variable 
         function addTimeout() {
            id = setTimeout( () => alert("Timed Out!!"), 5000)
            console.log("Timeout is set!")
