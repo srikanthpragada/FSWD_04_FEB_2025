@@ -1,6 +1,6 @@
-create database oct24;
+create database hr;
 
-use oct24;
+use hr;
 
 
 
@@ -38,6 +38,9 @@ insert into employees(fullname,dept_id,salary) values('Json Hunter','ac',null);
 
 update employees set salary = salary * 1.1 where dept_id = 'sa'
 
+delete from employees
+where emp_id = 10
+
 select * 
 from employees
 where salary > 500000
@@ -53,6 +56,8 @@ where fullname like '_t%'
 select *
 from employees
 where fullname like '%t%'
+
+
 
 select  fullname, dept_name
 from employees join departments 
@@ -85,6 +90,7 @@ from employees
 
 select fullname,  mid(fullname, instr(fullname,' ') + 1)
 from employees
+
 
 select  sum(salary)
 from employees
