@@ -1,7 +1,6 @@
 var mysql2 = require('mysql2/promise');
 var { connectionDetails } = require('./util')
 
-
 async function list() {
   try {
     const con = await mysql2.createConnection(connectionDetails);
