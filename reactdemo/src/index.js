@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Now from './basics/Now';
+import Course from './props/Course';
+import BMI from './props/BMI';
 //import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Now />
+     <BMI />
   </React.StrictMode>
 );
 
