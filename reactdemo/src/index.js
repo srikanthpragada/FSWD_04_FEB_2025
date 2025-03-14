@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Course from './props/Course';
 import BMI from './props/BMI';
+import Catalog from './props/Catalog';
+import Products from './props/Products';
+import CourseCC from './props/CourseCC';
 //import reportWebVitals from './reportWebVitals';
+
+const products = [ 
+    { name : 'iPhone 16', price : 100000},
+    { name : 'Bose Headphones', price : 30000},
+    { name : 'Logitech Mouse', price : 10000}
+]
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <BMI />
+     <CourseCC title="Generative AI" trainer="Srikanth Pragada" />
   </React.StrictMode>
 );
 

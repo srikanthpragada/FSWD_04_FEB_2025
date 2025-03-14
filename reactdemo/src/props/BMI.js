@@ -4,6 +4,19 @@ export default function BMI(props) {
   // calculate bmi index
   // find out category 
 
+  var height = (props.height / 100) ** 2 
+  var bmiIndex  = props.weight / height  
+
+  var category = "Obese"
+  if(bmiIndex < 18.5)
+      category = "underweight"
+  else
+    if(bmiIndex < 25)
+         category = "Healthy"
+    else
+    if (bmiIndex < 30)
+          category = "Overweight"
+
   return (
     <div>
         <h1>BMI Results</h1>
@@ -18,11 +31,11 @@ export default function BMI(props) {
             </tr>
             <tr>
                 <td>BMI Index</td>
-                <td>{props.bmiIndex}</td>
+                <td>{bmiIndex}</td>
             </tr>
             <tr>
                 <td>Category</td>
-                <td>{props.category}</td>
+                <td>{category}</td>
             </tr>
         </table>
     </div>
