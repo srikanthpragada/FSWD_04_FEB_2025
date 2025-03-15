@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import BMI from './props/BMI';
-import Catalog from './props/Catalog';
-import Products from './props/Products';
-import CourseCC from './props/CourseCC';
+import Counter from './state/Counter';
+import Interest from './events/Interest';
 //import reportWebVitals from './reportWebVitals';
 
 const products = [ 
@@ -16,7 +14,7 @@ const products = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <CourseCC title="Generative AI" trainer="Srikanth Pragada" />
+      <Interest />
   </React.StrictMode>
 );
 
