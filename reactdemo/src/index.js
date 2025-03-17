@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Counter from './state/Counter';
-import Interest from './events/Interest';
+import Passengers from './state/Passengers';
 //import reportWebVitals from './reportWebVitals';
 
 const products = [ 
@@ -14,7 +13,7 @@ const products = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <Interest />
+      <Passengers />
   </React.StrictMode>
 );
 
