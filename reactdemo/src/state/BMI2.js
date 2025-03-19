@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 
-export default function BMI() {
-    var [weight, setWeight] = useState(70)
-    var [height, setHeight] = useState(170)
+export default function BMI2() {
+    var [data, setData] = useState({weight : 70, height : 170})
     var [bmiIndex, setBMIIndex] = useState(0)
     var [bmiCategory, setBMICategory] = useState('')
 
     function calculate(e) {
         e.preventDefault()  // prevent form submission
-        var bmi = weight / ((height / 100) ** 2)
+        var bmi = data.weight / ((data.height / 100) ** 2)
         setBMIIndex(bmi)
 
         var category = "Obese"
@@ -24,24 +23,23 @@ export default function BMI() {
         setBMICategory(category)
 
     }
-    function updateHeight(e) {
-        setHeight(e.target.value)
+    function updateData(e) {
+        var ename = e.target.name 
+        var evalue = e.target.value 
+        setData( { ... data, [ename] : evalue})
     }
 
-    function updateWeight(e) {
-        setWeight(e.target.value)
-    }
     return (
         <div>
             <h2>BMI</h2>
             <form onSubmit={calculate}>
                 Height (CM) <br />
-                <input type="number" value={height}
-                    onChange={updateHeight} required  min="100" />
+                <input type="number" value={data.height} name="height"
+                    onChange={updateData} required  min="100" />
                 <p></p>
                 Weight (KG) <br />
-                <input type="number" value={weight}
-                    onChange={updateWeight} required  min="30" />
+                <input type="number" value={data.weight} name="weight"
+                    onChange={updateData} required  min="30" />
                 <p></p>
                 <button>Calculate</button>
             </form>

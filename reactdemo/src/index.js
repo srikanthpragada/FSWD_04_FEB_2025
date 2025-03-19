@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import BMI from './state/BMI';
+import CounterCC from './state/CounterCC';
 //import reportWebVitals from './reportWebVitals';
 
 const products = [ 
@@ -13,7 +13,7 @@ const products = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <BMI />
+      <CounterCC />
   </React.StrictMode>
 );
 
