@@ -17,7 +17,6 @@ function AddPassenger({ passengers, addPassenger, clearAll }) {
 
         // call function in parent component 
         addPassenger({ name: pname, age: age })
-
     }
 
     return (
