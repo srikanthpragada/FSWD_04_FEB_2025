@@ -8,8 +8,8 @@ export default function FetchDemo() {
         fetch("https://timeapi.io/api/time/current/zone?timeZone=Asia/Calcutta")
             .then(response => {
                 //console.log(response);
-                if(response.status === 400){
-                    throw new Error("Invalid Timezone")
+                if(response.status !== 200){
+                    throw new Error("Invalid Request")
                 }
                 return response.json()
             })

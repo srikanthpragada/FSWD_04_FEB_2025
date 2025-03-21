@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CounterCC from './state/CounterCC';
-import PropsDrilling from './context/PropsDrilling';
-import Parent from './context/FunctionDemo';
-import UncontrolledDemo from './state/UncontrolledDemo';
+import GitUserInfo from './ajax/GitUserInfo';
+import Main from './routing/Main';
 //import reportWebVitals from './reportWebVitals';
 
 const products = [ 
@@ -16,7 +14,7 @@ const products = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <UncontrolledDemo />
+      <Main />
   </React.StrictMode>
 );
 

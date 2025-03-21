@@ -43,7 +43,8 @@ export default function GitUserInfo() {
             &nbsp;
             <span className="text-danger ">{message}</span>
             <p></p>
-            <button disabled={userId.length === 0} onClick={getInfo}>Get Info</button>
+            <button disabled={userId.length === 0} 
+                    onClick={getInfo}>Get Info</button>
 
             <p></p>
             {

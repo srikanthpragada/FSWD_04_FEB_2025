@@ -14,7 +14,7 @@ export default function ShowIndiaTime() {
                 error:
                     () => {
                         setNow(''); // clear output 
-                        alert("Sorry! Couldn't get date and time")
+                        alert("Sorry! Couldn't get date and time!")
                     }
             }
         )
