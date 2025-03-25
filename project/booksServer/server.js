@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors()) 
 
 // static files config
-//app.use(express.static('frontend'))
+app.use(express.static('client'))
 
 
 app.get('/books', handlers.getBooks) 

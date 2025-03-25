@@ -31,10 +31,10 @@ export default function ListAuthors() {
                         authors.map((author) =>
                             <tr key={author.author}>
                                 <td>{author.author} </td>
-                                <td> {author.bookCount} </td>
+                                <td>{author.bookCount} </td>
                                 <td>
                                     <Link to={`/booksByAuthor/${author.author}`}
-                                    className="btn btn-info">Books</Link>
+                                        className="btn btn-info">Books</Link>
                                 </td>
                             </tr>
                         )
